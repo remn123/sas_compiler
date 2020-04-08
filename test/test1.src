@@ -1,0 +1,14 @@
+DATA mylib.mydataoutput ;
+	SET mylib.mydatainput ;
+
+	IF (x > 10 AND &VAR1. < 2) THEN DO;
+		result = 0;
+	END;
+	ELSE IF (z < 1 OR y = 3) THEN DO;
+		result = 1;
+	END;
+	ELSE DO;
+		result = 2;
+	END;	
+
+RUN;
